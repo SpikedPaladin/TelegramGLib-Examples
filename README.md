@@ -4,4 +4,4 @@ Examples of using TelegramGLib bot API
 
 ## Available examples
 
-* [EchoBot](https://github.com/SpikedPaladin/TelegramGLib-Examples/tree/master/EchoBot)
+* [EchoBot](https://github.com/SpikedPaladin/TelegramGLib-Examples/tree/main/EchoBot)
