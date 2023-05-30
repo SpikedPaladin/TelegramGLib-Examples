@@ -5,3 +5,4 @@ Examples of using TelegramGLib bot API
 ## Available examples
 
 * [EchoBot](https://github.com/SpikedPaladin/TelegramGLib-Examples/tree/main/EchoBot)
+* [InlineBot](https://github.com/SpikedPaladin/TelegramGLib-Examples/tree/main/InlineBot)
