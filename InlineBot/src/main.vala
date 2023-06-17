@@ -1,5 +1,3 @@
-using Telegram.Requests;
-using Telegram.Types;
 using Telegram;
 
 void main() {
@@ -8,9 +6,6 @@ void main() {
     
     // Start bot to make them recieve updates
     bot.start();
-    
-    // Creating a main loop for our bot to run until the application is closed
-    new MainLoop().run();
 }
 
 public class InlineBot : Bot {
@@ -26,10 +21,10 @@ public class InlineBot : Bot {
         token = "YOUR TOKEN HERE";
         
         // To enable debug prints uncomment next line
-        debug = true;
+        // config.debug = true;
     }
     
-    public override void update_recieved(Update update) {
+    public override void on_update(Update update) {
         
         // Check if recieved update has inline query
         if (update.inline_query != null) {
@@ -50,9 +45,6 @@ public class InlineBot : Bot {
                 if (update.inline_query.query == "image") {
                     
                     results += new InlineQueryResultPhoto() {
-                        // Generate random id for our result
-                        id = Uuid.string_random(),
-                        
                         // Set photo for result
                         photo_url = "https://i.ibb.co/jDsgKx5/Vala.png",
                         // Set thumbnail for result
@@ -62,9 +54,6 @@ public class InlineBot : Bot {
                 // Add user query as result
                 } else {
                     results += new InlineQueryResultArticle() {
-                        // Generate random id for our result
-                        id = Uuid.string_random(),
-                        
                         // Set title for our result
                         title = "Print your message",
                         // Set description for our result
@@ -79,7 +68,6 @@ public class InlineBot : Bot {
             // Add special result if query is empty
             } else if (answer_empty_query) {
                 results += new InlineQueryResultArticle() {
-                    id = Uuid.string_random(),
                     title = "Print best language in the world",
                     thumbnail_url = "https://i.ibb.co/jDsgKx5/Untitled1.png",
                     input_message_content = new InputTextMessageContent() {

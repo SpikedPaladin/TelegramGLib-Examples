@@ -1,5 +1,3 @@
-using Telegram.Requests;
-using Telegram.Types;
 using Telegram;
 
 void main() {
@@ -8,9 +6,6 @@ void main() {
     
     // Start bot to make them recieve updates
     bot.start();
-    
-    // Creating a main loop for our bot to run until the application is closed
-    new MainLoop().run();
 }
 
 public class EchoBot : Bot {
@@ -23,10 +18,10 @@ public class EchoBot : Bot {
         token = "YOUR TOKEN HERE";
         
         // To enable debug prints uncomment next line
-        // debug = true;
+        // config.debug = true;
     }
     
-    public override void update_recieved(Update update) {
+    public override void on_update(Update update) {
         
         // Check if recieved update has message & if message has text
         if (update.message != null && update.message.text != null) {
