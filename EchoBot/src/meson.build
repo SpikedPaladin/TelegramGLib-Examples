@@ -1,5 +1,5 @@
 project_deps = [
-    dependency('telegram-glib-0.3')
+    dependency('telegram-glib-1.0')
 ]
 
 project_sources = [
