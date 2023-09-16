@@ -1,4 +1,6 @@
-project('echo-bot', ['c', 'vala'],
+project(
+    'echo-bot', ['c', 'vala'],
+    
     default_options: [
         'warning_level=2'
     ],

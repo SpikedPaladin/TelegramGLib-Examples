@@ -1,4 +1,6 @@
-project('inline-bot', ['c', 'vala'],
+project(
+    'inline-bot', ['c', 'vala'],
+    
     default_options: [
         'warning_level=2'
     ],

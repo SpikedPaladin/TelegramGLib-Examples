@@ -6,9 +6,10 @@ project_sources = [
     'main.vala',
 ]
 
-executable('inline-bot',
+executable(
+    'inline-bot',
+    
     project_sources,
-    vala_args: '--target-glib=2.58',
     dependencies: project_deps,
     install: true,
 )
